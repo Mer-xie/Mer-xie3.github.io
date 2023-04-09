@@ -1,0 +1,94 @@
+:root{
+    --main-radius:5px;
+    --main-padding:5px;
+}
+body{
+    background-color: black;
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas: 
+    "name name name name"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+    grid-gap: 0.4rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: wheat;
+    text-align: center;
+}
+#name{
+    grid-area: name;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+#main{
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+#sidebar{
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+#content1{
+    grid-area: content1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#content2{
+    grid-area: content2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+#content3{
+    grid-area: content3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+#footer{
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+P{
+    text-align: left;
+    font-size: 8px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+ul{
+    text-align: left;
+}
+h1{
+    text-align: center;
+    font-size: 10px;
+}
+h3{
+    text-align: left;
+    font-size: 8px;
+    font-family:initial;
+}
+
+@media only screen and (max-width:550px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+        "name"
+        "sidebar"
+        "main"
+        "content1"
+        "content2"
+        "content3"
+        "footer";
+    }
+}
